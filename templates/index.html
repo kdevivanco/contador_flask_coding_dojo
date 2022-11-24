@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Landing Index</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <h3>{{se_counter}}</h3>
+        <div class="form-container">
+            <form action='/click' method='post'>
+                <input type='submit' name= "click" value="click" id="click">
+            </form>
+            <form action='/click' method='post'>
+                <input type='submit' name= "doubleclick"  value="doubleclick" id="dclick">
+            </form>
+            <form action='/destroypage' method='post'>
+                <input type='submit' name= "refresh"  value="refresh" id="refresh">
+            </form>
+        </div>
+        <form action='/userch' method='post'>
+            <div> Choose your number...</div>
+            <input type="number" name="user_choice" id="user_choice">
+            <input type='submit' name= "user_choice"  value="submit choice" id="submitchoice">
+        </form>
+    </div>
+        
+
+
+</body>
+</html>
